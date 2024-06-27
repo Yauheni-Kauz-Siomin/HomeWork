@@ -6,9 +6,9 @@ public class PositiveOrNegativeNumber_4_1 {
         int a = 10;
 
         if (a % 2 == 0) {
-            System.out.println("Число " + a + " четное");
+            System.out.println("пїЅпїЅпїЅпїЅпїЅ " + a + " пїЅпїЅпїЅпїЅпїЅпїЅ");
         } else {
-        System.out.println("Число " + a + " нечетное");
+        System.out.println("пїЅпїЅпїЅпїЅпїЅ " + a + " пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
         }
     }
 }
