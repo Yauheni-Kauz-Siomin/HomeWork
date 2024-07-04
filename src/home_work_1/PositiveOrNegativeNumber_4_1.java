@@ -6,9 +6,9 @@ public class PositiveOrNegativeNumber_4_1 {
         int a = 10;
 
         if (a % 2 == 0) {
-            System.out.println("����� " + a + " ������");
+            System.out.println("????? " + a + " ??????");
         } else {
-        System.out.println("����� " + a + " ��������");
+        System.out.println("????? " + a + " ????????");
         }
     }
 }
