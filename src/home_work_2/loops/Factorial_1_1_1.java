@@ -9,13 +9,13 @@ public class Factorial_1_1_1 {
 
     public static void checkAndFactorial() {
         Scanner scn = new Scanner(System.in);
-        System.out.println("Введите целое положительное число: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ: ");
         if (scn.hasNextLong()) {
             long b = scn.nextLong();
             if (b < 0) {
-                System.out.println("Введено отрицательное число, повторите ввод!");
+                System.out.println("Р’РІРµРґРµРЅРѕ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ!");
             } else {
-                System.out.print("Результат вычисления равен: ");
+                System.out.print("Р РµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёСЃР»РµРЅРёСЏ СЂР°РІРµРЅ: ");
                 long multi = 1;
                 while (b > 0) {
                     multi = multi * b;
@@ -31,9 +31,9 @@ public class Factorial_1_1_1 {
             }
 
         } else if (scn.hasNextDouble()) {
-            System.out.println("Введено не целое число, повторите ввод!"); // работает, если вводить дробное число через запятую
+            System.out.println("Р’РІРµРґРµРЅРѕ РЅРµ С†РµР»РѕРµ С‡РёСЃР»Рѕ, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ!"); // СЂР°Р±РѕС‚Р°РµС‚, РµСЃР»Рё РІРІРѕРґРёС‚СЊ РґСЂРѕР±РЅРѕРµ С‡РёСЃР»Рѕ С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ
         } else {
-            System.out.println("Введено НЕ число, повторите ввод!");
+            System.out.println("Р’РІРµРґРµРЅРѕ РќР• С‡РёСЃР»Рѕ, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ!");
         }
     }
 }
