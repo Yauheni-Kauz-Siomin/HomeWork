@@ -2,7 +2,7 @@ package home_work_2.loops;
 
 import java.util.Scanner;
 
-public class MultiplyingNumbers_1_1_1 {
+public class Factorial_1_1_1 {
     public static void main(String[] args) {
         checkAndFactorial();
     }
