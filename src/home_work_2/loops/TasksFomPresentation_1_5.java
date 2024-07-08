@@ -27,7 +27,7 @@ public class TasksFomPresentation_1_5 {
     public static int findMaxDigit(int value) {
         int number = 565_329;
         int tmp = Math.abs(value);
-        int maxDigit = 0;
+        int maxDigit = -1;
         while (tmp != 0) {
             int current = tmp % 10;
             if (current > maxDigit) {
