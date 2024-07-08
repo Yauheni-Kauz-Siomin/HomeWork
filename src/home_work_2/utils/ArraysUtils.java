@@ -1,11 +1,13 @@
 package home_work_2.utils;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- 2.1. Создать класс ArraysUtils. В этом классе не должно быть main метода. В этом классе написать следующие методы:
- 2.1.1. Написать метод public static int[] arrayFromConsole(). Данный метод размер массива и каждый его элемент
- запрашивает у пользователя через консоль. */
+ * 2.1. Создать класс ArraysUtils. В этом классе не должно быть main метода. В этом классе написать следующие методы:
+ * 2.1.1. Написать метод public static int[] arrayFromConsole(). Данный метод размер массива и каждый его элемент
+ * запрашивает у пользователя через консоль.
+ */
 
 
 public class ArraysUtils {
@@ -20,9 +22,6 @@ public class ArraysUtils {
             System.out.print("Введите элемент массива массива: ");
             int element = scn2.nextInt();
             container1[i] = element;
-        }
-        for (int j : container1) {
-            System.out.print(j + "   ");
         }
         return container1;
     }

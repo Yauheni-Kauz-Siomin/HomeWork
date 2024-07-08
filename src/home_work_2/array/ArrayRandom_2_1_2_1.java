@@ -13,9 +13,9 @@ import java.util.Random;
  */
 
 
-public class ArrayRandom {
+public class ArrayRandom_2_1_2_1 {
     public static void main(String[] args) {
-        arrayRandom(10, 100);
+        arrayRandom(50, 100);
 
     }
     public static int[] arrayRandom(int size, int maxValueExclusion) {
