@@ -15,6 +15,7 @@ public class TasksFomPresentation_1_5 {
     public static void main(String[] args) {
         findMaxDigit(565_329);
         probabilityOfEvenNumbers();
+        evenAndOddNumbers(1_234_777);
 
 
     }
@@ -46,13 +47,32 @@ public class TasksFomPresentation_1_5 {
             if (temp % 2 == 0) {
                 count++;
             }
-
         }
         double result = ((double) count / n * 100);
         System.out.println("Количество четных чисел в выборке из " + n + " объектов составило " + count + " , что в процентах " + result);
     }
 
+    public static void evenAndOddNumbers(long value) {
+
+        long numb = Math.abs(value);
+        int countEvenNumb = 0;
+        int countOddNumb = 0;
+        while (numb != 0) {
+            if (numb % 2 == 0) {
+                countEvenNumb++;
+            } else {
+                countOddNumb++;
+            }
+            numb /= 10;
+        }
+        System.out.println("Количество четных чисел в числе " + value + " составило " + countEvenNumb + " , нечетных -  " + countOddNumb);
+    }
+
+
+
 }
+
+
 
 
 
