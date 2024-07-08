@@ -11,6 +11,7 @@ public class MultiplicationTable_1_6 {
         int a1 = 6;
         int temp1 = 6;
         int c1 = 0;
+        int b1 = 1;
 
 
         while (c < 10) {
@@ -29,12 +30,12 @@ public class MultiplicationTable_1_6 {
 
         while (c1 < 10) {
             for (int i = 0; i < 4; i++) {
-                System.out.print(a1 + " х " + b + " = " + (a * b) + " || ");
+                System.out.print(a1 + " х " + b1 + " = " + (a1 * b1) + " || ");
                 a1++;
                 if (i == 3) {
                     System.out.println();
                     a1 = temp1;
-                    b++;
+                    b1++;
                     c1++;
                 }
             }
