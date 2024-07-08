@@ -18,6 +18,7 @@ public class TasksFomPresentation_1_5 {
         probabilityOfEvenNumbers();
         evenAndOddNumbers(1_234_777);
         fibonacci();
+        seriesOfNumbers();
 
 
     }
@@ -86,15 +87,40 @@ public class TasksFomPresentation_1_5 {
         int firstNumber = 0;
         int secondNumber = 1;
         int sumNumber;
-        while (count < numb  ) {
+        while (count < numb) {
             sumNumber = firstNumber + secondNumber;
             firstNumber = secondNumber;
             secondNumber = sumNumber;
             count++;
             System.out.print(secondNumber + " ");
         }
+        System.out.println();
+    }
+
+    public static void seriesOfNumbers() {
+
+        Scanner scn1 = new Scanner(System.in);
+        System.out.println("Введите минимальное натуральное число диапазона ");
+        int minNumber = scn1.nextInt();
+        Scanner scn2 = new Scanner(System.in);
+        System.out.println("Введите максимальное натуральное число диапазона ");
+        int maxNumber = scn2.nextInt();
+        Scanner scn3 = new Scanner(System.in);
+        System.out.println("Введите шаг диапазона ");
+        int stepNumber = scn3.nextInt();
+        int temp = 0;
+        int firstNumber;
+        while (temp <= maxNumber) {
+            firstNumber = minNumber;
+            temp = minNumber + stepNumber;
+            minNumber = temp;
+            System.out.print(firstNumber + " ");
+        }
+        System.out.println();
 
     }
+
+
 }
 
 
