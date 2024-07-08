@@ -19,6 +19,7 @@ public class TasksFomPresentation_1_5 {
         evenAndOddNumbers(1_234_777);
         fibonacci();
         seriesOfNumbers();
+        numberReversal();
 
 
     }
@@ -120,7 +121,16 @@ public class TasksFomPresentation_1_5 {
 
     }
 
-
+    public static void numberReversal() {
+        Scanner scn1 = new Scanner(System.in);
+        System.out.println("Введите целое натуральное число: ");
+        int number = scn1.nextInt();
+        while (number != 0) {
+            int temp = number % 10;
+            number /= 10;
+            System.out.print(temp);
+        }
+    }
 }
 
 
