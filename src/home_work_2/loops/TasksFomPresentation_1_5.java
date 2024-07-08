@@ -10,12 +10,14 @@
 package home_work_2.loops;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class TasksFomPresentation_1_5 {
     public static void main(String[] args) {
         findMaxDigit(565_329);
         probabilityOfEvenNumbers();
         evenAndOddNumbers(1_234_777);
+        fibonacci();
 
 
     }
@@ -68,8 +70,31 @@ public class TasksFomPresentation_1_5 {
         System.out.println("Количество четных чисел в числе " + value + " составило " + countEvenNumb + " , нечетных -  " + countOddNumb);
     }
 
+    /* Вывести на экран столько элементов ряда Фибоначчи, сколько указал пользователь.
+    Если на ввод поступило 6, то вывод должен содержать первых шесть чисел ряда
+    Фибоначчи: 1 2 3 5 8 13.
+    Ряд фибоначчи:Последовательность чисел, которые задаются по определённому правилу:
+     каждое следующее число равно сумме двух предыдущих. Первые два числа заданы сразу
+     и равны 0 и 1
+     */
 
+    public static void fibonacci() {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("Введите количество выводимых элементов ряда Фибоначчи: ");
+        int numb = scn.nextInt();
+        int count = 0;
+        int firstNumber = 0;
+        int secondNumber = 1;
+        int sumNumber;
+        while (count < numb  ) {
+            sumNumber = firstNumber + secondNumber;
+            firstNumber = secondNumber;
+            secondNumber = sumNumber;
+            count++;
+            System.out.print(secondNumber + " ");
+        }
 
+    }
 }
 
 
