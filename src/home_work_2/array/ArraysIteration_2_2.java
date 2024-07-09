@@ -94,9 +94,6 @@ public class ArraysIteration_2_2 {
         }
     }
 }
-// 2.2.3. Вывести все элементы массива в консоль в обратном порядке.
-
- //   public static void arrayReverse2_2_3() {
 
 
 
