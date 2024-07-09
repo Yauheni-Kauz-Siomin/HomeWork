@@ -44,45 +44,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ArrayFromConsole.executor": "Run",
-    "Application.ArrayFromConsole_2_1_1_1.executor": "Run",
-    "Application.ArrayRandom.executor": "Run",
-    "Application.ArrayTest.executor": "Run",
-    "Application.ArraysIteration_2_2.executor": "Run",
-    "Application.Eexponentiation_1_3.executor": "Run",
-    "Application.Exponentiation_1_3.executor": "Run",
-    "Application.Factorial.executor": "Run",
-    "Application.FactorialRecursion_1_1_2.executor": "Run",
-    "Application.Factorial_1_1_1.executor": "Run",
-    "Application.Main1.executor": "Debug",
-    "Application.Main2.executor": "Run",
-    "Application.MultiplicationTable_1_6.executor": "Run",
-    "Application.MultiplyingNumbersRecursion_1_1_2.executor": "Run",
-    "Application.MultiplyingNumbers_1_1_1.executor": "Run",
-    "Application.MultiplyingNumbers_1_1_1_2.executor": "Run",
-    "Application.MultiplyingNumbers_1_2.executor": "Run",
-    "Application.Proba.executor": "Run",
-    "Application.SortTestRandomAndConsole.executor": "Run",
-    "Application.SortTestRandomConsole.executor": "Run",
-    "Application.SortsMain.executor": "Run",
-    "Application.TasksArrays_2_4.executor": "Run",
-    "Application.TasksFomPresentation_1_5.executor": "Run",
-    "Application.Test.executor": "Run",
-    "Application.xzZXZ.executor": "Run",
-    "Application.ваываыва.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "F:/IT/ОБУЧЕНИЕ в IT АКАДЕМИИ (18.06.2024)/HomeWork",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "File.Encoding"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ArrayFromConsole.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ArrayFromConsole_2_1_1_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ArrayRandom.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ArrayTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ArraysIteration_2_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Eexponentiation_1_3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exponentiation_1_3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Factorial.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FactorialRecursion_1_1_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Factorial_1_1_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main1.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Main2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MultiplicationTable_1_6.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MultiplyingNumbersRecursion_1_1_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MultiplyingNumbers_1_1_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MultiplyingNumbers_1_1_1_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MultiplyingNumbers_1_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Proba.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SortTestRandomAndConsole.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SortTestRandomConsole.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SortsMain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TasksArrays_2_4.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TasksFomPresentation_1_5.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.xzZXZ.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ваываыва.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/IT/ОБУЧЕНИЕ в IT АКАДЕМИИ (18.06.2024)/HomeWork&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.SortTestRandomAndConsole">
+}</component>
+  <component name="RunManager" selected="Application.SortsMain">
     <configuration name="ArrayTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="home_work_2.array.ArrayTest" />
       <module name="HomeWork" />
@@ -150,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SortTestRandomAndConsole" />
         <item itemvalue="Application.SortsMain" />
         <item itemvalue="Application.TasksArrays_2_4" />
         <item itemvalue="Application.ArrayTest" />
         <item itemvalue="Application.ArraysIteration_2_2" />
+        <item itemvalue="Application.SortTestRandomAndConsole" />
       </list>
     </recent_temporary>
   </component>
