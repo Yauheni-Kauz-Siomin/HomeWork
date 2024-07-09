@@ -2,7 +2,7 @@ package home_work_2.array;
 
 import java.util.Arrays;
 
-import static home_work_2.array.ArrayRandom_2_1_2_1.arrayRandom;
+import static home_work_2.utils.ArraysUtils.arrayRandom;
 
 public class TasksArrays_2_4 {
     public static void main(String[] args) {
@@ -18,6 +18,7 @@ public class TasksArrays_2_4 {
 
     public static void sumOfEvenPositiveElements() {
         int[] container = arrayRandom(15, 100);
+        System.out.println(Arrays.toString(container));
         int sum = 0;
         for (int i = 0; i < container.length; i++) {
             if (container[i] > 0 && i % 2 == 0) {
@@ -25,15 +26,15 @@ public class TasksArrays_2_4 {
             }
         }
         System.out.println("Сумма четных положительных элементов массива равна: " + sum);
-
-
+        System.out.println();
     }
+
 // 2.4.2. Максимальный из элементов массива с четными индексами
 
     public static void maxDigitWithEvenIndex() {
         System.out.println();
         int[] container = arrayRandom(15, 100);
-        System.out.println();
+        System.out.println(Arrays.toString(container));
 
         int maxDigit = -1;
         for (int i = 0; i < container.length; i++) {
@@ -49,12 +50,13 @@ public class TasksArrays_2_4 {
 
     public static void arrayElementsLessThanArithmeticMean() {
         int[] container = arrayRandom(15, 100);
-        System.out.println();
+        System.out.println(Arrays.toString(container));
         int sum = 0;
         for (int i = 0; i < container.length; i++) {
             sum += container[i];
         }
         System.out.println("Cреднее арифметическое равно: " + sum / container.length);
+        System.out.print("Элементы массива, которые меньше среднего арифметического: ");
         for (int i = 0; i < container.length; i++) {
             if (container[i] < (sum / container.length)) {
                 System.out.print(container[i] + "   ");
@@ -62,33 +64,32 @@ public class TasksArrays_2_4 {
 
         }
         System.out.println();
-
+        System.out.println();
     }
 
     // 2.4.4. Элементы массива, которые меньше среднего арифметического
 
     public static void twoMinimumArrayElements() {
-        System.out.println();
         int[] container = arrayRandom(7, 100);
-        System.out.println();
+        System.out.println(Arrays.toString(container));
         int minNumber1 = container[0];
         int minNumber2 = container[1];
+        System.out.print("Два минимальных элемента в массиве это: ");
         for (int i = 0; i < container.length; i++) {
             if (container[i] < minNumber1) {
                 minNumber1 = container[i];
             }
-
         }
         System.out.print(minNumber1 + "  ");
 
         for (int i = 0; i < container.length; i++) {
-            if ((container[i] > minNumber1) && (container[i] <= minNumber2)) {
+            if ((container[i] > minNumber1) && (container[i] < minNumber2)) {
                 minNumber2 = container[i];
             }
 
         }
-
         System.out.print(minNumber2 + "  ");
+        System.out.println();
         System.out.println();
     }
 
@@ -96,12 +97,12 @@ public class TasksArrays_2_4 {
     // 2.4.5. Сжать массив, удалив элементы, принадлежащие интервалу, как пример [10, 40]
 
     public static void compressingArrayByInterval() {
-        System.out.println();
         int[] container = arrayRandom(7, 100);
+        System.out.println(Arrays.toString(container));
         int min = 10;
         int max = 40;
         int count = 0;
-        System.out.println();
+        System.out.print("Массив, после сжатия на элементы, попадающие в интервал [10, 40]: ");
         for (int i = 0; i < container.length; i++) {
             if (container[i] > min && container[i] < max) {
                 container[i] = 0;
@@ -123,7 +124,7 @@ public class TasksArrays_2_4 {
     public static void sumOfArrayDigits() {
         System.out.println();
         int[] container = arrayRandom(5, 100);
-        System.out.println();
+        System.out.println(Arrays.toString(container));
         int sum = 0;
         int sumNumber = 0;
         for (int i = 0; i < container.length; i++) {
