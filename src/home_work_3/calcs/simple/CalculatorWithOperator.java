@@ -31,7 +31,7 @@ public class CalculatorWithOperator {
         return a + b;
     }
 
-    public static double exponentiation(double a, int b) {
+    public double exponentiation(double a, int b) {
         double result = 1;
         for (int i = 0; i < b; i++) {
             result = result * a;
@@ -40,14 +40,14 @@ public class CalculatorWithOperator {
         return result;
     }
 
-    public static double absoluteValueOfNumber(double a) {
+    public double absoluteValueOfNumber(double a) {
         if (a < 0) {
             a = a * (-1);
         }
         return a;
     }
 
-    public static double sqrtMethod(double a) {
+    public double sqrtMethod(double a) {
         if (a == 0) {
             return 0;
         } else if (a == 1){
