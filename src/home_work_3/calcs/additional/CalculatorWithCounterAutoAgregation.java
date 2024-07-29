@@ -2,17 +2,24 @@ package home_work_3.calcs.additional;
 
 import home_work_3.calcs.simple.CalculatorWithMathCopy;
 
-public class CalculatorWithCounterAutoComposite {
+public class CalculatorWithCounterAutoAgregation {
+
 
 
     private CalculatorWithMathCopy calc = new CalculatorWithMathCopy();
+
+
     private long countOperation = 0;
+
+
+    public CalculatorWithCounterAutoAgregation() {
+        this.calc = calc;
+    }
 
 
     public long getCountOperation() {
         return countOperation;
     }
-
 
     public double division(double a, double b) {
         countOperation++;
@@ -47,3 +54,8 @@ public class CalculatorWithCounterAutoComposite {
     }
 
 }
+
+
+
+
+
