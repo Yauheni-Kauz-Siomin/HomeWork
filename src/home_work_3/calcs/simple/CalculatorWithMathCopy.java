@@ -12,7 +12,9 @@ package home_work_3.calcs.simple;
 //        посчитать выражения из задания 1. Вывести в консоль результат.
 
 
-public class CalculatorWithMathCopy {
+import home_work_3.calcs.api.ICalculator;
+
+public class CalculatorWithMathCopy implements ICalculator {
 
     public double division(double a, double b) {
         return a / b;

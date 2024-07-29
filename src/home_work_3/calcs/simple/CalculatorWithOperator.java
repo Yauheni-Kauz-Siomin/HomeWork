@@ -13,7 +13,9 @@ package home_work_3.calcs.simple;
 //        метода "Квадратный корень из числа" можно воспользоваться библиотекой Math.
 
 
-public class CalculatorWithOperator {
+import home_work_3.calcs.api.ICalculator;
+
+public class CalculatorWithOperator extends CalculatorWithMathCopy implements ICalculator {
 
     public double division(double a, double b) {
         return a / b;
