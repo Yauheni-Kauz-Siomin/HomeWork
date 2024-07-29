@@ -17,8 +17,8 @@ package home_work_3.calcs.simple;
 
 
 
-
 public class CalculatorWithMathExtends extends CalculatorWithOperator{
+
 
     public double exponentiation(double a, int b) {
         return Math.pow(a, b);
