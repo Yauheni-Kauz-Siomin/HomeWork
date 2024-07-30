@@ -20,15 +20,13 @@ public class CalculatorWithCounterClassic extends CalculatorWithMathExtends {
 
     private long countOperation;
 
+    // геттер на подсчет количества операций
     public long getCountOperation() {
         return countOperation;
     }
 
-
     public void incrementCountOperation() {
-
         countOperation = countOperation + 1;
-
     }
 
 }

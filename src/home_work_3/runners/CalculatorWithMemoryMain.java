@@ -12,9 +12,9 @@ public class CalculatorWithMemoryMain {
         CalculatorWithOperator calcOperator = new CalculatorWithOperator();
         CalculatorWithMemory calcMemory = new CalculatorWithMemory(calcOperator);
 
-        double a =  calcMemory.exponentiation(( calcMemory.division(28, 5)), 2);
+        double a = calcMemory.exponentiation((calcMemory.division(28, 5)), 2);
         calcMemory.save();
-        double b = calcMemory.addition(calcMemory.multiplication(15, 7),calcMemory.load());
+        double b = calcMemory.addition(calcMemory.multiplication(15, 7), calcMemory.load());
         calcMemory.save();
         System.out.println(calcMemory.addition(4.1, calcMemory.load()));
 
