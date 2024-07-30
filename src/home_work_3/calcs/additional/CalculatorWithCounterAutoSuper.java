@@ -28,6 +28,7 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
     }
 
     public double addition(double a, double b) {
+        countOperation++;
         return super.addition(a, b);
     }
 
@@ -37,10 +38,12 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
     }
 
     public double absoluteValueOfNumber(double a) {
+        countOperation++;
         return super.absoluteValueOfNumber(a);
     }
 
     public double sqrtMethod(double a) {
+        countOperation++;
         return super.sqrtMethod(a);
     }
 }

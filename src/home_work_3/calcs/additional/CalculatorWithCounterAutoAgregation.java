@@ -12,7 +12,7 @@ public class CalculatorWithCounterAutoAgregation {
     private long countOperation = 0;
 
 
-    public CalculatorWithCounterAutoAgregation() {
+    public CalculatorWithCounterAutoAgregation(CalculatorWithMathCopy calculatorWithMathCopy) {
         this.calc = calc;
     }
 
@@ -37,6 +37,7 @@ public class CalculatorWithCounterAutoAgregation {
     }
 
     public double addition(double a, double b) {
+        countOperation++;
         return calc.addition(a, b);
     }
 
@@ -46,10 +47,12 @@ public class CalculatorWithCounterAutoAgregation {
     }
 
     public double absoluteValueOfNumber(double a) {
+        countOperation++;
         return calc.absoluteValueOfNumber(a);
     }
 
     public double sqrtMethod(double a) {
+        countOperation++;
         return calc.sqrtMethod(a);
     }
 

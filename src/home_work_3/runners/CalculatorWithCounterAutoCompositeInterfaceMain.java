@@ -15,5 +15,4 @@ public class CalculatorWithCounterAutoCompositeInterfaceMain {
         System.out.println(calculator10.addition(4.1, b));
         System.out.println(calculator10.getCountOperation());
     }
-
 }

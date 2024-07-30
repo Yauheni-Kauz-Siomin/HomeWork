@@ -30,6 +30,7 @@ public class CalculatorWithCounterAutoComposite {
     }
 
     public double addition(double a, double b) {
+        countOperation++;
         return calc.addition(a, b);
     }
 
@@ -39,10 +40,12 @@ public class CalculatorWithCounterAutoComposite {
     }
 
     public double absoluteValueOfNumber(double a) {
+        countOperation++;
         return calc.absoluteValueOfNumber(a);
     }
 
     public double sqrtMethod(double a) {
+        countOperation++;
         return calc.sqrtMethod(a);
     }
 

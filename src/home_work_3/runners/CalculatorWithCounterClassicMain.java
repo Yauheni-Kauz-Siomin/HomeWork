@@ -11,7 +11,9 @@ public class CalculatorWithCounterClassicMain {
 
         double a = calculator2.exponentiation((calculator2.division(28, 5)), 2);
         calculator2.incrementCountOperation();
+        calculator2.incrementCountOperation();
         double b = calculator2.addition(calculator2.multiplication(15, 7), a);
+        calculator2.incrementCountOperation();
         calculator2.incrementCountOperation();
         System.out.println(calculator2.addition(4.1, b));
         calculator2.incrementCountOperation();
