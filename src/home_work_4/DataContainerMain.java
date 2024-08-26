@@ -88,10 +88,18 @@ public class DataContainerMain {
         System.out.println(cont13);
         System.out.println(result5);
 
+        System.out.println("______________________________________________________________");
+        DataContainer<Integer> cont14 = new DataContainer<>(new Integer[]{1, 2, 3, 777});
+        boolean result6 = cont14.deleteItem(111);
+        System.out.println(cont14);
+        System.out.println(result6);
 
 
-
-
+        System.out.println("______________________________________________________________");
+        DataContainer<Integer> cont15 = new DataContainer<>(new Integer[]{1, 2, 3, 777, 3});
+        boolean result7 = cont15.deleteItem(3);
+        System.out.println(cont15);
+        System.out.println(result7);
 
 
 
