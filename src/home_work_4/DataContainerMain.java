@@ -54,22 +54,45 @@ public class DataContainerMain {
 
         System.out.println("______________________________________________________________");
         DataContainer<Integer> cont8 = new DataContainer<>(new Integer[]{1, 2, 3, 777});
-        boolean result = cont8.delete(3);
+        boolean result = cont8.deleteIndex(3);
         System.out.println(cont8);
         System.out.println(result);
 
         System.out.println("______________________________________________________________");
         DataContainer<Integer> cont9 = new DataContainer<>(new Integer[]{1, 2, 3, 777});
-        boolean result1 = cont9.delete(9);
+        boolean result1 = cont9.deleteIndex(9);
         System.out.println(cont9);
         System.out.println(result1);
 
-
         System.out.println("______________________________________________________________");
         DataContainer<Integer> cont10 = new DataContainer<>(new Integer[]{1, 2, 3, 777});
-        boolean result2 = cont10.delete(2);
+        boolean result2 = cont10.deleteIndex(2);
         System.out.println(cont10);
         System.out.println(result2);
+
+        System.out.println("______________________________________________________________");
+        DataContainer<Integer> cont11 = new DataContainer<>(new Integer[]{1, 2, 3, 777});
+        boolean result3 = cont11.deleteItem(null);
+        System.out.println(cont11);
+        System.out.println(result3);
+
+        System.out.println("______________________________________________________________");
+        DataContainer<Integer> cont12 = new DataContainer<>(new Integer[]{1, 2, 3, 777, null});
+        boolean result4 = cont12.deleteItem(null);
+        System.out.println(cont12);
+        System.out.println(result4);
+
+        System.out.println("______________________________________________________________");
+        DataContainer<Integer> cont13 = new DataContainer<>(new Integer[]{1, 2, 3, 777});
+        boolean result5 = cont13.deleteItem(777);
+        System.out.println(cont13);
+        System.out.println(result5);
+
+
+
+
+
+
 
 
     }

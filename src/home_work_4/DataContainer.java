@@ -52,7 +52,7 @@ public class DataContainer<T> {
     }
 
 
-    public boolean delete(int index) {
+    public boolean deleteIndex(int index) {
         if (index >= 0 && index < data.length) {
             for (int i = index; i < data.length - 1; i++) {
                 data[i] = data[i + 1];
@@ -64,8 +64,22 @@ public class DataContainer<T> {
     }
 
 
+    public boolean deleteItem(T item) {
+        if (item != null) {
+            for (int i = 0; i < data.length; i++) {
+                if (item.equals(data[i])) {
+                    return deleteIndex(i);
+                }
+            }
+        }
+        return false;
+    }
+
+
     @Override
     public String toString() {
         return "data = " + Arrays.toString(data);
     }
+
+
 }
