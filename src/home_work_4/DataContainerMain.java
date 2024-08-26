@@ -47,11 +47,30 @@ public class DataContainerMain {
         int index7 = cont6.get(0);
         System.out.println("Под индексом " + +index6 + " число " + index7);
 
-
-
         System.out.println("______________________________________________________________");
         DataContainer<Integer> cont7 = new DataContainer<>(new Integer[]{9999});
         System.out.println(cont7);
         System.out.println(cont7.get(1));
+
+        System.out.println("______________________________________________________________");
+        DataContainer<Integer> cont8 = new DataContainer<>(new Integer[]{1, 2, 3, 777});
+        boolean result = cont8.delete(3);
+        System.out.println(cont8);
+        System.out.println(result);
+
+        System.out.println("______________________________________________________________");
+        DataContainer<Integer> cont9 = new DataContainer<>(new Integer[]{1, 2, 3, 777});
+        boolean result1 = cont9.delete(9);
+        System.out.println(cont9);
+        System.out.println(result1);
+
+
+        System.out.println("______________________________________________________________");
+        DataContainer<Integer> cont10 = new DataContainer<>(new Integer[]{1, 2, 3, 777});
+        boolean result2 = cont10.delete(2);
+        System.out.println(cont10);
+        System.out.println(result2);
+
+
     }
 }

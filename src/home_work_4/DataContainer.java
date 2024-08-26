@@ -47,6 +47,22 @@ public class DataContainer<T> {
 
     }
 
+    public T[] getItems() {
+        return data;
+    }
+
+
+    public boolean delete(int index) {
+        if (index >= 0 && index < data.length) {
+            for (int i = index; i < data.length - 1; i++) {
+                data[i] = data[i + 1];
+            }
+            data = Arrays.copyOf(data, data.length - 1);
+            return true;
+        }
+        return false;
+    }
+
 
     @Override
     public String toString() {
