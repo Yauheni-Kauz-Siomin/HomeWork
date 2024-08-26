@@ -12,7 +12,6 @@ public class DataContainer<T> {
     }
 
 
-
     public int add(T item) {
         int index = -1;
 
@@ -38,6 +37,16 @@ public class DataContainer<T> {
         return index;
 
     }
+
+
+    public T get(int index) {
+        if (index >= 0 && index < data.length) {
+            return data[index];
+        }
+        return null;
+
+    }
+
 
     @Override
     public String toString() {
