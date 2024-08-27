@@ -88,10 +88,28 @@ public class DataContainer<T> {
         }
     }
 
+/*
     @Override
     public String toString() {
         return "data = " + Arrays.toString(data);
     }
+*/
 
-
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder("[");
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] != null) {
+                builder.append(data[i].toString());
+                if (i < data.length - 1) {
+                    builder.append(", ");
+                }
+            }
+        }
+        if (data.length != 0 && data[data.length - 1] == null) {
+            builder = new StringBuilder(builder.substring(0, builder.length() - 2));
+        }
+        builder.append("]");
+        return builder.toString();
+    }
 }
