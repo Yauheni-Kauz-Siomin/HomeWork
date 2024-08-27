@@ -1,7 +1,5 @@
 package home_work_4;
 
-import java.util.Comparator;
-
 public class DataContainerMain {
     public static void main(String[] args) {
 
@@ -111,7 +109,11 @@ public class DataContainerMain {
 
 
 
-
+        System.out.println("______________________________________________________________");
+        DataContainer<String> cont17 = new DataContainer<>(new String[]{"i", "hello", "1", "Как домашка"});
+        System.out.println(cont17);
+        cont17.sort(new StringLengthComparator());
+        System.out.println(cont17);
 
 
 
