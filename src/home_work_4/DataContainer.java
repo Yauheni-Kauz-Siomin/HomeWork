@@ -1,6 +1,7 @@
 package home_work_4;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class DataContainer<T> {
 
@@ -75,6 +76,17 @@ public class DataContainer<T> {
         return false;
     }
 
+    public void sort(Comparator<T> comparator) {
+        for (int i = 0; i < data.length - 1; i++) {
+            for (int j = 0; j < data.length - 1 - i; j++) {
+                if (data[j] != null && data[j + 1] != null && comparator.compare(data[j], data[j + 1]) > 0) {
+                    T temp = data[j];
+                    data[j] = data[j + 1];
+                    data[j + 1] = temp;
+                }
+            }
+        }
+    }
 
     @Override
     public String toString() {

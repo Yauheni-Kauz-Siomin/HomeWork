@@ -1,5 +1,7 @@
 package home_work_4;
 
+import java.util.Comparator;
+
 public class DataContainerMain {
     public static void main(String[] args) {
 
@@ -100,6 +102,18 @@ public class DataContainerMain {
         boolean result7 = cont15.deleteItem(3);
         System.out.println(cont15);
         System.out.println(result7);
+
+        System.out.println("______________________________________________________________");
+        DataContainer<Integer> cont16 = new DataContainer<>(new Integer[]{3, 1, 3, 777});
+        System.out.println(cont16);
+        cont16.sort(new IntegerComparator());
+        System.out.println(cont16);
+
+
+
+
+
+
 
 
 
