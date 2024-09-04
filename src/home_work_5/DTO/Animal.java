@@ -1,4 +1,6 @@
-package home_work_5;
+package home_work_5.DTO;
+
+import java.util.Objects;
 
 public class Animal {
 
@@ -24,5 +26,18 @@ public class Animal {
                 "age=" + age +
                 ", nick='" + nick + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return age == animal.age && Objects.equals(nick, animal.nick);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(age, nick);
     }
 }

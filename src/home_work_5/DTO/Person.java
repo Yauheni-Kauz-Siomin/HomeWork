@@ -1,4 +1,6 @@
-package home_work_5;
+package home_work_5.DTO;
+
+import java.util.Objects;
 
 public class Person {
     private String nick;
@@ -12,14 +14,17 @@ public class Person {
     }
 
     public String getNick() {
+
         return nick;
     }
 
     public int getPassword() {
+
         return password;
     }
 
     public String getName() {
+
         return name;
     }
 
@@ -30,5 +35,18 @@ public class Person {
                 ", password=" + password +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return password == person.password && Objects.equals(nick, person.nick) && Objects.equals(name, person.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nick, password, name);
     }
 }
