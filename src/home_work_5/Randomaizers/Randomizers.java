@@ -1,10 +1,11 @@
-package home_work_5;
+package home_work_5.Randomaizers;
 
 import java.util.Random;
 
 public class Randomizers {
     private static final String[] HUMAN_NAMES = {"Евгений", "Василий", "Анна", "Пётр", "Евлампий"};
     private static final String[] ANIMAL_NICKS = {"Рекс", "Жучка", "Бим", "Крабер"};
+
     private static final Random random = new Random();
 
 
@@ -38,7 +39,6 @@ public class Randomizers {
     }
 
     public static String generateRandomNamesFromFile(String filename) {
-
     }
 
 }
