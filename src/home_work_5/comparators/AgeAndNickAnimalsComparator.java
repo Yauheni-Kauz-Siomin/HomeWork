@@ -4,7 +4,7 @@ import home_work_5.DTO.Animal;
 
 import java.util.Comparator;
 
-public class AgeAndNickAnimalsComparator implements Comparator <Animal>{
+public class AgeAndNickAnimalsComparator implements Comparator<Animal> {
     @Override
     public int compare(Animal o1, Animal o2) {
         int result = Integer.compare(o1.getAge(), o2.getAge());

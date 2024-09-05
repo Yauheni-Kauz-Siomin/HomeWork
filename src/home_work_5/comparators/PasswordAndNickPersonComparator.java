@@ -7,10 +7,11 @@ import java.util.Comparator;
 public class PasswordAndNickPersonComparator implements Comparator<Person> {
     @Override
     public int compare(Person o1, Person o2) {
-        int result = Integer.compare(o1.getPassword(), o2.getPassword());
-        if (result == 0) {
-            result = o1.getNick().compareTo(o2.getNick());
+        int lenghtComparison = Integer.compare(o1.getPassword().length(), o2.getPassword().length());
+        if (lenghtComparison != 0) {
+            return lenghtComparison;
         }
-        return result;
+        return o1.getName().compareTo(o2.getName());
     }
 }
+

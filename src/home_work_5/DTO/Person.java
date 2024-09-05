@@ -3,37 +3,42 @@ package home_work_5.DTO;
 import java.util.Objects;
 
 public class Person {
-    private String nick;
-    private int password;
     private String name;
+    private String password;
+    private String nickname;
 
-    public Person(String nick, int password, String name) {
-        this.nick = nick;
-        this.password = password;
+    public Person(String name, String password, String nickname) {
         this.name = name;
-    }
-
-    public String getNick() {
-
-        return nick;
-    }
-
-    public int getPassword() {
-
-        return password;
+        this.password = password;
+        this.nickname = nickname;
     }
 
     public String getName() {
-
         return name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setPassword(String password) {
+        if (password.length()>= 5 && password.length()<= 10){
+            this.password=password;
+        }else {
+            throw new IllegalArgumentException("Пароль должен содержать от 5 до 10 символов!");
+        }
     }
 
     @Override
     public String toString() {
         return "Person{" +
-                "nick='" + nick + '\'' +
-                ", password=" + password +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", nickname='" + nickname + '\'' +
                 '}';
     }
 
@@ -42,11 +47,12 @@ public class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return password == person.password && Objects.equals(nick, person.nick) && Objects.equals(name, person.name);
+        return Objects.equals(name, person.name) && Objects.equals(password, person.password) && Objects.equals(nickname, person.nickname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nick, password, name);
+        return Objects.hash(name, password, nickname);
     }
+
 }
