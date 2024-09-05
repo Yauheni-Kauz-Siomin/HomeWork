@@ -8,7 +8,16 @@ public class Randomizers {
 
     private static final Random random = new Random();
 
+    public static String generatePassword(){
 
+        StringBuilder password = new StringBuilder();
+        int passwordLength = (random.nextInt(10));
+        for (int i = 0; i < passwordLength; i++){
+            password.append((char) random.nextInt(9) + 16);
+        }
+
+        return password.toString();
+    }
     public static String generateRandomString() {
 
         int stringLength = random.nextInt(10);
