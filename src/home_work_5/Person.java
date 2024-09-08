@@ -1,4 +1,4 @@
-package home_work_5.DTO;
+package home_work_5;
 
 import java.util.Objects;
 

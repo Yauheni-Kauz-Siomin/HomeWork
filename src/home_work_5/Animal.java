@@ -1,31 +1,23 @@
-package home_work_5.DTO;
+package home_work_5;
 
 import java.util.Objects;
 
 public class Animal {
-
     private int age;
-    private String nick;
+    private String nickName;
+
 
     public Animal(int age, String nick) {
         this.age = age;
-        this.nick = nick;
+        this.nickName = nick;
     }
 
     public int getAge() {
         return age;
     }
 
-    public String getNick() {
-        return nick;
-    }
-
-    @Override
-    public String toString() {
-        return "Animal{" +
-                "age=" + age +
-                ", nick='" + nick + '\'' +
-                '}';
+    public String getNickName() {
+        return nickName;
     }
 
     @Override
@@ -33,11 +25,13 @@ public class Animal {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Animal animal = (Animal) o;
-        return age == animal.age && Objects.equals(nick, animal.nick);
+        return age == animal.age && Objects.equals(nickName, animal.nickName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(age, nick);
+        return Objects.hash(age, nickName);
     }
 }
+
+
