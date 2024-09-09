@@ -43,16 +43,21 @@ public class Main {
         sortMethod(
                 linkedListPersons, arrayListPersons, hashSetPersons, treeSetPersons,
                 linkedListAnimals, arrayListAnimals, hashSetAnimals, treeSetAnimals);
+
         System.out.println("Итерирование по коллекциям Person");
         iterationMethod(linkedListPersons, arrayListPersons, hashSetPersons, treeSetPersons);
         System.out.println("Итерирование по коллекциям Animal");
         iterationMethod(linkedListAnimals, arrayListAnimals, hashSetAnimals, treeSetAnimals);
 
+        System.out.println("Удаление по коллекциям Person");
+        deleteElements(linkedListPersons, arrayListPersons, hashSetPersons, treeSetPersons);
+        System.out.println("Удаление по коллекциям Animal");
+        deleteElements(linkedListAnimals, arrayListAnimals, hashSetAnimals, treeSetAnimals);
 
     }
 
 
-    private static void generateRandomAnimalList(List<Animal> animals, int numberOfEntries ) {
+    private static void generateRandomAnimalList(List<Animal> animals, int numberOfEntries) {
         for (int i = 0; i < numberOfEntries; i++) {
             int age = ThreadLocalRandom.current().nextInt(1, 16);
             String nickname = Randomizers.generateRandomNickAnimals();
@@ -94,7 +99,7 @@ public class Main {
             Set<Animal> hashSetAnimals, Set<Animal> treeSetAnimal) {
 
         long startTime = System.currentTimeMillis();
-        generateRandomPersonList(new LinkedList<>(linkedListPersons),linkedListPersons.size() );
+        generateRandomPersonList(new LinkedList<>(linkedListPersons), linkedListPersons.size());
         System.out.println("Заполнение LinkedList<Person> составило: " + (System.currentTimeMillis() - startTime) + " мс");
         startTime = System.currentTimeMillis();
         generateRandomPersonList(new ArrayList<>(arrayListPersons), arrayListPersons.size());
@@ -161,6 +166,40 @@ public class Main {
         System.out.println("Итерирование TreeSet составило: " + (System.currentTimeMillis() - startTime) + " мс");
     }
 
+
+    private static void deleteElements(List<?> linkedList, List<?> arrayList, Set<?> hashSet, Set<?> treeSet) {
+        long startTime = System.currentTimeMillis();
+        Iterator<?>iterator = linkedList.iterator();
+        while (iterator.hasNext()) {
+            iterator.next();
+            iterator.remove();
+        }
+        System.out.println("Удаление элементов из LinkedList составило: " + (System.currentTimeMillis() - startTime) + " мс");
+
+        startTime = System.currentTimeMillis();
+        iterator = arrayList.iterator();
+        while (iterator.hasNext()) {
+            iterator.next();
+            iterator.remove();
+        }
+        System.out.println("Удаление элементов из ArrayList составило: " + (System.currentTimeMillis() - startTime) + " мс");
+
+        startTime = System.currentTimeMillis();
+        iterator = hashSet.iterator();
+        while (iterator.hasNext()) {
+            iterator.next();
+            iterator.remove();
+        }
+        System.out.println("Удаление элементов из HashSet составило: " + (System.currentTimeMillis() - startTime) + " мс");
+
+        startTime = System.currentTimeMillis();
+        iterator = treeSet.iterator();
+        while (iterator.hasNext()) {
+            iterator.next();
+            iterator.remove();
+        }
+        System.out.println("Удаление элементов из TreeSet составило: " + (System.currentTimeMillis() - startTime) + " мс");
+    }
 
 }
 
