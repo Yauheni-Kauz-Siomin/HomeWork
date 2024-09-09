@@ -35,6 +35,11 @@ public class Main {
         timeMeter(
                 linkedListPersons, arrayListPersons, hashSetPersons, treeSetPersons,
                 linkedListAnimals, arrayListAnimals, hashSetAnimals, treeSetAnimals);
+
+        sortMethod(
+                linkedListPersons, arrayListPersons, hashSetPersons, treeSetPersons,
+                linkedListAnimals, arrayListAnimals, hashSetAnimals, treeSetAnimals);
+
     }
 
 
@@ -76,6 +81,7 @@ public class Main {
         }
     }
 
+
     private static void timeMeter(
             List<Person> linkedListPersons, List<Person> arrayListPersons,
             Set<Person> hashSetPersons, Set<Person> treeSetPersons,
@@ -91,7 +97,39 @@ public class Main {
         startTime = System.currentTimeMillis();
         generateRandomPersonSet(new HashSet<>(hashSetPersons));
         System.out.println("Заполнение HashSet<Person> составило: " + (System.currentTimeMillis() - startTime) + " мс");
+        startTime = System.currentTimeMillis();
+        generateRandomAnimalList(new LinkedList<>(linkedListAnimals));
+        System.out.println("Заполнение LinkedList<Animal> составило: " + (System.currentTimeMillis() - startTime) + " мс");
+        startTime = System.currentTimeMillis();
+        generateRandomAnimalList(new ArrayList<>(arrayListAnimals));
+        System.out.println("Заполнение ArrayList<Animal> составило: " + (System.currentTimeMillis() - startTime) + " мс");
+        startTime = System.currentTimeMillis();
+        generateRandomAnimalSet(new HashSet<>(hashSetAnimals));
+        System.out.println("Заполнение HashSet<Animal> составило: " + (System.currentTimeMillis() - startTime) + " мс");
+
     }
+
+    private static void sortMethod(List<Person> linkedListPersons, List<Person> arrayListPersons,
+                                   Set<Person> hashSetPersons, Set<Person> treeSetPersons,
+                                   List<Animal> linkedListAnimals, List<Animal> arrayListAnimals,
+                                   Set<Animal> hashSetAnimals, Set<Animal> treeSetAnimal) {
+        long startTime = System.currentTimeMillis();
+        Collections.sort(arrayListPersons, new PasswordLenghtPersonComparator());
+        System.out.println("Сортировка ArrayList<Person> по длине пароля составила: " + (System.currentTimeMillis() - startTime) + " мс");
+        startTime = System.currentTimeMillis();
+        Collections.sort(linkedListPersons, new PasswordLenghtPersonComparator());
+        System.out.println("Сортировка linkedList<Person> по длине пароля составила: " + (System.currentTimeMillis() - startTime) + " мс");
+        startTime = System.currentTimeMillis();
+        Collections.sort(arrayListAnimals, new AgeAnimalsComparator());
+        System.out.println("Сортировка ArrayList<Animal> по возрасту составила: " + (System.currentTimeMillis() - startTime) + " мс");
+        startTime = System.currentTimeMillis();
+        Collections.sort(linkedListAnimals, new AgeAnimalsComparator());
+        System.out.println("Сортировка linkedList<Animal> по длине пароля составила: " + (System.currentTimeMillis() - startTime) + " мс");
+    }
+
+
+
+
 
 }
 
