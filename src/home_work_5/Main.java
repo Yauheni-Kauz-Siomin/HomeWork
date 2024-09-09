@@ -15,9 +15,13 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Main {
     public static void main(String[] args) {
 
+        int numberOfEntries = 300_000;
 
         List<Person> persons = new ArrayList<>();
         List<Animal> animals = new ArrayList<>();
+        generateRandomAnimalList(animals, numberOfEntries);
+        generateRandomPersonList(persons, numberOfEntries);
+
 
         LinkedList<Person> linkedListPersons = new LinkedList<>(persons);
         ArrayList<Person> arrayListPersons = new ArrayList<>(persons);
@@ -39,12 +43,16 @@ public class Main {
         sortMethod(
                 linkedListPersons, arrayListPersons, hashSetPersons, treeSetPersons,
                 linkedListAnimals, arrayListAnimals, hashSetAnimals, treeSetAnimals);
+        System.out.println("Итерирование по коллекциям Person");
+        iterationMethod(linkedListPersons, arrayListPersons, hashSetPersons, treeSetPersons);
+        System.out.println("Итерирование по коллекциям Animal");
+        iterationMethod(linkedListAnimals, arrayListAnimals, hashSetAnimals, treeSetAnimals);
+
 
     }
 
 
-    private static void generateRandomAnimalList(List<Animal> animals) {
-        int numberOfEntries = 300_000;
+    private static void generateRandomAnimalList(List<Animal> animals, int numberOfEntries ) {
         for (int i = 0; i < numberOfEntries; i++) {
             int age = ThreadLocalRandom.current().nextInt(1, 16);
             String nickname = Randomizers.generateRandomNickAnimals();
@@ -52,8 +60,7 @@ public class Main {
         }
     }
 
-    private static void generateRandomAnimalSet(Set<Animal> animals) {
-        int numberOfEntries = 300_000;
+    private static void generateRandomAnimalSet(Set<Animal> animals, int numberOfEntries) {
         for (int i = 0; i < numberOfEntries; i++) {
             int age = ThreadLocalRandom.current().nextInt(1, 16);
             String nickname = Randomizers.generateRandomNickAnimals();
@@ -61,8 +68,7 @@ public class Main {
         }
     }
 
-    private static void generateRandomPersonList(List<Person> persons) {
-        int numberOfEntries = 300_000;
+    private static void generateRandomPersonList(List<Person> persons, int numberOfEntries) {
         for (int i = 0; i < numberOfEntries; i++) {
             String name = Randomizers.generateRandomNamesHumans();
             String passwords = Randomizers.generatePassword();
@@ -71,8 +77,7 @@ public class Main {
         }
     }
 
-    private static void generateRandomPersonSet(Set<Person> persons) {
-        int numberOfEntries = 300_000;
+    private static void generateRandomPersonSet(Set<Person> persons, int numberOfEntries) {
         for (int i = 0; i < numberOfEntries; i++) {
             String name = Randomizers.generateRandomNamesHumans();
             String passwords = Randomizers.generatePassword();
@@ -89,22 +94,22 @@ public class Main {
             Set<Animal> hashSetAnimals, Set<Animal> treeSetAnimal) {
 
         long startTime = System.currentTimeMillis();
-        generateRandomPersonList(new LinkedList<>(linkedListPersons));
+        generateRandomPersonList(new LinkedList<>(linkedListPersons),linkedListPersons.size() );
         System.out.println("Заполнение LinkedList<Person> составило: " + (System.currentTimeMillis() - startTime) + " мс");
         startTime = System.currentTimeMillis();
-        generateRandomPersonList(new ArrayList<>(arrayListPersons));
+        generateRandomPersonList(new ArrayList<>(arrayListPersons), arrayListPersons.size());
         System.out.println("Заполнение ArrayList<Person> составило: " + (System.currentTimeMillis() - startTime) + " мс");
         startTime = System.currentTimeMillis();
-        generateRandomPersonSet(new HashSet<>(hashSetPersons));
+        generateRandomPersonSet(new HashSet<>(hashSetPersons), hashSetPersons.size());
         System.out.println("Заполнение HashSet<Person> составило: " + (System.currentTimeMillis() - startTime) + " мс");
         startTime = System.currentTimeMillis();
-        generateRandomAnimalList(new LinkedList<>(linkedListAnimals));
+        generateRandomAnimalList(new LinkedList<>(linkedListAnimals), linkedListAnimals.size());
         System.out.println("Заполнение LinkedList<Animal> составило: " + (System.currentTimeMillis() - startTime) + " мс");
         startTime = System.currentTimeMillis();
-        generateRandomAnimalList(new ArrayList<>(arrayListAnimals));
+        generateRandomAnimalList(new ArrayList<>(arrayListAnimals), arrayListAnimals.size());
         System.out.println("Заполнение ArrayList<Animal> составило: " + (System.currentTimeMillis() - startTime) + " мс");
         startTime = System.currentTimeMillis();
-        generateRandomAnimalSet(new HashSet<>(hashSetAnimals));
+        generateRandomAnimalSet(new HashSet<>(hashSetAnimals), hashSetAnimals.size());
         System.out.println("Заполнение HashSet<Animal> составило: " + (System.currentTimeMillis() - startTime) + " мс");
 
     }
@@ -128,7 +133,33 @@ public class Main {
     }
 
 
+    private static void iterationMethod(List<?> linkedList, List<?> arrayList, Set<?> hashSet, Set<?> treeSet) {
+        long startTime = System.currentTimeMillis();
+        Iterator<?> iterator = linkedList.iterator();
+        while (iterator.hasNext()) {
+            iterator.next();
+        }
+        System.out.println("Итерирование LinkedList составило: " + (System.currentTimeMillis() - startTime) + " мс");
 
+        startTime = System.currentTimeMillis();
+        for (Object item : arrayList) {
+        }
+        System.out.println("Итерирование ArrayList составило: " + (System.currentTimeMillis() - startTime) + " мс");
+
+        startTime = System.currentTimeMillis();
+        iterator = hashSet.iterator();
+        while (iterator.hasNext()) {
+            iterator.next();
+        }
+        System.out.println("Итерирование HashSet составило: " + (System.currentTimeMillis() - startTime) + " мс");
+
+        startTime = System.currentTimeMillis();
+        iterator = treeSet.iterator();
+        while (iterator.hasNext()) {
+            iterator.next();
+        }
+        System.out.println("Итерирование TreeSet составило: " + (System.currentTimeMillis() - startTime) + " мс");
+    }
 
 
 }
