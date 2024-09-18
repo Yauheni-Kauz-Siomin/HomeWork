@@ -4,6 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegExSearch implements ISearchEngine {
+
     @Override
     public long search(String text, String word) {
         Pattern pattern = Pattern.compile("\\b" + Pattern.quote(word) + "\\b");
