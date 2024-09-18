@@ -21,11 +21,35 @@ public class Main {
 
         List<String> words = new ArrayList<>(Arrays.asList(book.split("[\\p{Punct}\\s]+"))); // для сравнения
 
-        System.out.println("Количество слов (уникальных): " +allWords.size());
-        System.out.println("Количество всего слов в книге: " +words.size());
+        System.out.println("Количество слов (уникальных): " + allWords.size());
+
+        System.out.println("Количество всего слов в книге: " + words.size() + "\n");
+
+        System.out.println(Arrays.toString(allWords.toArray()));
+
+
+        // 2.2 Найти в тексте топ N (настраиваемое значение) слов и вывести количество этих слов используя Map и List.
+        // Отсортировать по количеству. Распечатать в консоль.
+
+        Map<String, Integer> wordCount = new HashMap<>();
+        for (String word : book.split("[\\p{Punct}\\s]+")) {
+            wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+        }
+
+        List<Map.Entry<String, Integer>> sortEntries = new ArrayList<>(wordCount.entrySet());
+        sortEntries.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
+
+        Scanner scn = new Scanner(System.in);
+        System.out.println("Введите количество топ N слов для их вывода:");
+        int N = scn.nextInt();
+        scn.nextLine();
+
+        for (int i = 0; i < N && i < sortEntries.size(); i++) {
+            Map.Entry<String, Integer> entry = sortEntries.get(i);
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
 
     }
-
 
 
 }
