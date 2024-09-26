@@ -7,7 +7,7 @@ public class RegExSearch implements ISearchEngine {
 
     @Override
     public long search(String text, String word) {
-        Pattern pattern = Pattern.compile("\\b" + Pattern.quote(word) + "\\b");
+        Pattern pattern = Pattern.compile(Pattern.quote(word));
         Matcher matcher = pattern.matcher(text);
         long count = 0;
         while (matcher.find()) {
